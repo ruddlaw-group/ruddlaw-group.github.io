@@ -221,7 +221,9 @@
 				if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
 				{
 					let result = xmlHttp.responseText;
-					result = result.trim;
+					/* Update 02/10/20 */
+					result = result.trim();
+					/* /Update 02/10/20 */
 					eval(xmlHttp.responseText);
 					if(!result.length)
 						UnFreezeUI();
