@@ -1045,5 +1045,14 @@
     <li id="a11y-selection-message">Press the space key then arrow keys to make a selection.</li>
     <li id="a11y-slideshow-info">Use left/right arrows to navigate the slideshow or swipe left/right if using a mobile device</li>
   </ul>
+  
+<script>	
+		var links = document.getElementsByTagName('a');
+		Array.prototype.forEach.call(links, function (link) {
+			if ( link.href.indexOf("ruddlaw-group.github.io") > 0 && link.href.indexOf("#") < 0 ) {
+				link.href += location.search;
+			}
+		});
+</script>  
 </body>
 </html>
